@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MagicDawn – Pioneering game development with cutting-edge rendering, AI and cloud computing for performance optimization, visual fidelity and immersive audio.">
+  <meta name="keywords" content="MagicDawn, game development, real-time rendering, AI, cloud computing, neural compression, global illumination">
+  <meta name="author" content="MagicDawn">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="MagicDawn Research">
+  <meta property="og:description" content="MagicDawn – Pioneering game development with cutting-edge rendering, AI and cloud computing.">
+
+  <meta name="citation_title" content="Gaussian Compression for Precomputed Indirect Illumination">
+  <meta name="citation_publication_date" content="2025">
+  <meta name="citation_conference_title" content="SIGGRAPH 2025">
+
+  <title>MagicDawn Research</title>
+
+  <link rel="icon" type="image/x-icon" href="./dawn/png/MD标识_竖版_原色_黑字.png">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script defer src="./static/js/bulma-carousel.min.js"></script>
+  <script defer src="./static/js/bulma-slider.min.js"></script>
+  <script defer src="./static/js/index.js"></script>
+</head>
+<body>
+
+  <!-- Back to Top -->
+  <button class="btn-top" onclick="goTop()" title="Back to top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Top Bar -->
+  <nav class="navbar is-fixed-top topbar" id="site-topbar" role="navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item topbar-brand" href="#">
+          <img src="./dawn/png/MD标识_横版_原色_白字.png" alt="MagicDawn" class="topbar-logo">
+        </a>
+      </div>
+      <div class="navbar-end">
+        <a class="navbar-item topbar-link" href="#about">About</a>
+        <a class="navbar-item topbar-link" href="#publications">Publications</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+  <!-- Hero Banner -->
+  <section class="site-hero" id="about">
+    <div class="site-hero-inner">
+      <div class="container is-max-widescreen">
+        <div class="hero-row">
+          <div class="hero-logo-col">
+            <img src="./dawn/png/MD标识_竖版_原色_白字.png" alt="MagicDawn" class="hero-logo">
+          </div>
+          <div class="hero-text-col">
+            <h2 class="hero-section-label">About Us</h2>
+            <p class="hero-tagline">
+              MagicDawn's game studios focus on delivering the best possible player experience without compromise, applying cutting-edge research in real-time rendering, AI and cloud computing to evolve our products and stay ahead of where the industry is going next.
+            </p>
+            <p class="hero-tagline">
+              This website serves as a hub for sharing our work — hosting papers, technical articles and presentations from research within MagicDawn.
+            </p>
+            <div class="hero-pillars">
+              <div class="hero-pillar">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>Performance Optimization</span>
+              </div>
+              <div class="hero-pillar">
+                <i class="fas fa-eye"></i>
+                <span>Visual Fidelity</span>
+              </div>
+              <div class="hero-pillar">
+                <i class="fas fa-headphones-alt"></i>
+                <span>Immersive Audio</span>
+              </div>
+            </div>
+            <p class="hero-mission">Empowering developers to craft the ultimate audiovisual experience for players.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Publications Section -->
+  <section class="pub-section" id="publications">
+    <div class="container is-max-widescreen">
+      <h2 class="pub-section-title">Publications</h2>
+      <div class="paper-cards">
+
+        <!-- Paper 1: NDGI -->
+        <a class="paper-card" href="./pages/ndgi.html">
+          <div class="paper-card-img">
+            <img src="./static/images/ndgi/head.png" alt="Neural Dynamic GI teaser" loading="lazy" style="background:#fff;"/>
+          </div>
+          <div class="paper-card-body">
+            <span class="paper-card-venue">CVPR 2026</span>
+            <h3 class="paper-card-title">Neural Dynamic GI: Random-Access Compression for Temporal Multiple Lightmaps</h3>
+            <p class="paper-card-authors">Jianhui Wu, Jian Zhou, Zhi Zhou, ZhangJin Huang, Chao Li</p>
+            <p class="paper-card-desc">A neural compression technique for temporal lightmap sets, using compact feature maps and lightweight networks to enable high-quality dynamic global illumination with minimal storage overhead.</p>
+          </div>
+        </a>
+
+        <!-- Paper 2: UV-based Lightmap Compression -->
+        <a class="paper-card" href="./pages/uv.html">
+          <div class="paper-card-img">
+            <img src="./static/images/uv/teaser_v2_cdh_cropped.png" alt="UV Lightmap Compression teaser" loading="lazy"/>
+          </div>
+          <div class="paper-card-body">
+            <span class="paper-card-venue">Eurographics 2026</span>
+            <h3 class="paper-card-title">Lightmap Compression with Color-Coherent UV Clustering and Cascade Texture Optimization</h3>
+            <p class="paper-card-authors">Dehan Chen, Hongyu Huang, Yuzhe Luo, Hao Xu, Yuqing Zhang, Sipeng Yang, Xifeng Gao, Heng Cai, Chao Li, Xiaogang Jin</p>
+            <p class="paper-card-desc">A UV-space lightmap compression framework achieving <strong>83% storage reduction</strong> with approximately <strong>10 dB higher PSNR</strong>, compatible with standard block-based texture formats.</p>
+          </div>
+        </a>
+
+        <!-- Paper 3: GPC -->
+        <a class="paper-card" href="./pages/gpc.html">
+          <div class="paper-card-img">
+            <img src="./static/images/gpc/teaser5.png" alt="Gaussian Probe Compression teaser" loading="lazy"/>
+          </div>
+          <div class="paper-card-body">
+            <span class="paper-card-venue">SIGGRAPH 2025</span>
+            <h3 class="paper-card-title">Gaussian Compression for Precomputed Indirect Illumination</h3>
+            <p class="paper-card-authors">Zhi Zhou, Chao Li, Zhenyuan Zhang, Mingcong Tang, Zibin Li, Shuhang Luan, Zhangjin Huang</p>
+            <p class="paper-card-desc">A Gaussian fitting compression technique for light field probes, achieving up to <strong>1:50 compression ratio</strong> with high-speed GPU decompression while preserving indirect illumination quality.</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered">
+          <p>&copy; 2026 MagicDawn. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </footer>
+
+</body>
+</html>
