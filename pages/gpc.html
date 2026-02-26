@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Gaussian Compression for Precomputed Indirect Illumination – SIGGRAPH 2025">
+  <title>GPC – MagicDawn Research</title>
+
+  <link rel="icon" type="image/x-icon" href="../dawn/png/MD标识_竖版_原色_黑字.png">
+  <link rel="stylesheet" href="../static/css/bulma.min.css">
+  <link rel="stylesheet" href="../static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="../static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="../static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="../static/css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="../static/js/fontawesome.all.min.js"></script>
+  <script defer src="../static/js/bulma-carousel.min.js"></script>
+  <script defer src="../static/js/bulma-slider.min.js"></script>
+  <script defer src="../static/js/index.js"></script>
+</head>
+<body>
+
+  <!-- Back to Top -->
+  <button class="btn-top" onclick="goTop()" title="Back to top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Top Bar -->
+  <nav class="navbar is-fixed-top topbar" id="site-topbar" role="navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item topbar-brand" href="../index.html">
+          <img src="../dawn/png/MD标识_横版_原色_白字.png" alt="MagicDawn" class="topbar-logo">
+        </a>
+      </div>
+      <div class="navbar-end">
+        <a class="navbar-item topbar-link" href="../index.html#about">About</a>
+        <a class="navbar-item topbar-link" href="../index.html#publications">Publications</a>
+      </div>
+    </div>
+  </nav>
+
+  <main style="padding-top: 3.25rem;">
+
+  <!-- Paper Header -->
+  <div class="paper-head">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h2 class="title is-2 pub-title">Gaussian Compression for Precomputed Indirect Illumination</h2>
+          <div class="is-size-5 pub-authors">
+            <span class="author-block">Zhi Zhou,</span>
+            <span class="author-block">Chao Li,</span>
+            <span class="author-block">Zhenyuan Zhang,</span>
+            <span class="author-block">Mingcong Tang,</span>
+            <span class="author-block">Zibin Li,</span>
+            <span class="author-block">Shuhang Luan,</span>
+            <span class="author-block">Zhangjin Huang</span>
+          </div>
+          <div class="is-size-5 pub-authors">
+            <span class="author-block">SIGGRAPH 2025</span>
+          </div>
+          <div class="column has-text-centered">
+            <div class="pub-links">
+              <span class="link-block">
+                <a href="../static/pdfs/Gaussian_Compression_for_Precomputed_Indirect_Illumination.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://doi.org/10.1145/3721238.3730758" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                <span class="icon"><i class="fas fa-link"></i></span>
+                <span>DOI</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Teaser -->
+  <div class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="../static/images/gpc/teaser5.png" alt="GPC teaser – Havana scene comparison" loading="lazy" style="width:100%; border-radius:8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);"/>
+        <h2 class="subtitle has-text-centered" style="margin-top:0.75rem;">
+          Havana scene comparison. Our Gaussian Probe Compression (GPC) achieves up to <strong>1:50 compression ratio</strong> while faithfully preserving color bleeding and indirect illumination details.
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- Abstract -->
+  <div class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
+          <h3 class="title is-3">Abstract</h3>
+          <div class="content has-text-justified">
+            <p>
+              Precomputed global illumination (GI) techniques, such as light probes, particularly focus on capturing indirect illumination and have gained widespread adoption. However, as the scale of the scenes continues to expand, the demand for storage space and runtime memory for light probes also increases substantially. To address this issue, we propose a novel Gaussian fitting compression technique specifically designed for light field probes, which enables the use of denser samples to describe illumination in complex scenes.
+            </p>
+            <p>
+              The core idea of our method is utilizing low-bit adaptive Gaussian functions to store the latent representation of light probes, enabling parallel and high-speed decompression on the GPU. Additionally, we implement a custom gradient propagation process to replace conventional inference frameworks, like PyTorch, ensuring an exceptional compression speed.
+            </p>
+            <p>
+              At the same time, by constructing a cascaded light field texture in real-time, we avoid the need for baking and storing a large number of redundant light field probes arranged in the form of 3D textures. This approach allows us to achieve further compression of the memory while maintaining high visual quality and rendering speed. Compared to traditional methods based on Principal Component Analysis (PCA), our approach consistently yields superb results across various test scenarios, achieving compression ratios of up to <strong>1:50</strong>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Video Showcase -->
+  <div class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h3 class="title is-3 has-text-centered">Video</h3>
+        <div class="columns is-centered" style="margin-bottom: 2rem;">
+          <div class="column is-10">
+            <video autoplay controls muted loop playsinline style="width:100%; border-radius:8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);">
+              <source src="../static/videos/gpc/CLV_ Compression_ShowCase_Low.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Method & Results -->
+  <div class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+
+        <!-- Framework -->
+        <h3 class="title is-3 has-text-centered">Method</h3>
+        <div class="columns is-centered" style="margin-bottom: 2rem;">
+          <div class="column is-10">
+            <img src="../static/images/gpc/framework.png" alt="GPC compression pipeline" loading="lazy" style="width:100%; border-radius:8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);"/>
+            <h2 class="subtitle has-text-centered" style="margin-top:0.75rem;">Overview of the compression pipeline. Given scattered light probes, Gaussian functions are initialized via clustering and jointly optimized with a lightweight MLP decoder. After convergence, parameters are quantized to low-bit integers for compact storage.</h2>
+          </div>
+        </div>
+
+        <!-- Qualitative Results -->
+        <h3 class="title is-3 has-text-centered">Results</h3>
+        <div class="columns is-centered" style="margin-bottom: 2rem;">
+          <div class="column is-10">
+            <img src="../static/images/gpc/qualitative_figure_only.png" alt="Qualitative comparison across scenes" loading="lazy" style="width:100%; border-radius:8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);"/>
+            <h2 class="subtitle has-text-centered" style="margin-top:0.75rem;">Qualitative comparison with PCA-based baselines under low compression ratio. Our method shows no significant visible errors across diverse scenes.</h2>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  </main>
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered">
+          <p>&copy; 2026 MagicDawn. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </footer>
+
+</body>
+</html>

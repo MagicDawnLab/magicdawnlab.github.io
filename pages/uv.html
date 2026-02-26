@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Lightmap Compression with Color-Coherent UV Clustering – Eurographics 2026">
+  <title>UV Lightmap Compression – MagicDawn Research</title>
+
+  <link rel="icon" type="image/x-icon" href="../dawn/png/MD标识_竖版_原色_黑字.png">
+  <link rel="stylesheet" href="../static/css/bulma.min.css">
+  <link rel="stylesheet" href="../static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="../static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="../static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="../static/css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="../static/js/fontawesome.all.min.js"></script>
+  <script defer src="../static/js/bulma-carousel.min.js"></script>
+  <script defer src="../static/js/bulma-slider.min.js"></script>
+  <script defer src="../static/js/index.js"></script>
+</head>
+<body>
+
+  <!-- Back to Top -->
+  <button class="btn-top" onclick="goTop()" title="Back to top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Top Bar -->
+  <nav class="navbar is-fixed-top topbar" id="site-topbar" role="navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item topbar-brand" href="../index.html">
+          <img src="../dawn/png/MD标识_横版_原色_白字.png" alt="MagicDawn" class="topbar-logo">
+        </a>
+      </div>
+      <div class="navbar-end">
+        <a class="navbar-item topbar-link" href="../index.html#about">About</a>
+        <a class="navbar-item topbar-link" href="../index.html#publications">Publications</a>
+      </div>
+    </div>
+  </nav>
+
+  <main style="padding-top: 3.25rem;">
+
+  <!-- Paper Header -->
+  <div class="paper-head">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h2 class="title is-2 pub-title">Lightmap Compression with Color-Coherent UV Clustering and Cascade Texture Optimization</h2>
+          <div class="is-size-5 pub-authors">
+            <span class="author-block">Dehan Chen,</span>
+            <span class="author-block">Hongyu Huang,</span>
+            <span class="author-block">Yuzhe Luo,</span>
+            <span class="author-block">Hao Xu,</span>
+            <span class="author-block">Yuqing Zhang,</span>
+            <span class="author-block">Sipeng Yang,</span>
+            <span class="author-block">Xifeng Gao,</span>
+            <span class="author-block">Heng Cai,</span>
+            <span class="author-block">Chao Li,</span>
+            <span class="author-block">Xiaogang Jin</span>
+          </div>
+          <div class="is-size-5 pub-authors">
+            <span class="author-block">Eurographics 2026</span>
+          </div>
+          <div class="column has-text-centered">
+            <div class="pub-links">
+              <span class="link-block">
+                <a class="external-link button is-normal is-rounded is-dark" disabled>
+                <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                <span>Paper (Coming Soon)</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Teaser -->
+  <div class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="../static/images/uv/teaser_v2_cdh_cropped.png" alt="Bedroom scene comparison with compressed lightmaps" style="width:100%; border-radius:8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);"/>
+        <h2 class="subtitle has-text-centered" style="margin-top:0.75rem;">
+          Bedroom scene rendered with our compressed lightmaps (left) vs. ground-truth (right). Our method achieves an <strong>83% reduction</strong> in storage cost with negligible perceptual differences (<strong>PSNR 51.79 dB</strong>, <strong>1–SSIM 0.0027</strong>).
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- Abstract -->
+  <div class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
+          <h3 class="title is-3">Abstract</h3>
+          <div class="content has-text-justified">
+            <p>
+              To address the storage overhead of lightmaps and the limitations of existing compression techniques, we propose a novel UV-space compression framework based on per-triangle processing. By mapping triangles to a standardized domain, we cluster and repack color-coherent regions into a compact atlas, generating a cascade texture refined via differentiable rendering. Experimental results show an average storage reduction of <strong>83%</strong> with approximately <strong>10 dB higher PSNR</strong> than existing methods. Our approach is the first dedicated lightmap compression framework compatible with standard block-based formats, offering an effective solution for memory-efficient 3D asset delivery.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Method -->
+  <div class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h3 class="title is-3 has-text-centered">Method</h3>
+        <div class="columns is-centered" style="margin-bottom: 2rem;">
+          <div class="column is-10">
+            <img src="../static/images/uv/pipeline_v7_cdh.png" alt="Compression pipeline overview" style="width:100%; border-radius:8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);"/>
+            <h2 class="subtitle has-text-centered" style="margin-top:0.75rem;">Pipeline overview. Our three-stage framework: (a) Feature texture construction maps each UV triangle to a canonical square domain for robust similarity assessment. (b) Greedy graph partitioning clusters color-coherent triangles for UV repacking. (c) Cascade texture optimization via differentiable rendering produces compact dual-texture output.</h2>
+          </div>
+        </div>
+
+        <h3 class="title is-3 has-text-centered">Results</h3>
+        <div class="columns is-centered" style="margin-bottom: 2rem;">
+          <div class="column is-10">
+            <img src="../static/images/uv/ours_result_V2.png" alt="Visual results across multiple meshes" style="width:100%; border-radius:8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);"/>
+            <h2 class="subtitle has-text-centered" style="margin-top:0.75rem;">Visual results. For each mesh we show the original rasterized HDR radiance (left), our compressed result (middle), and amplified difference (right). Metrics (<strong>PSNR</strong> / <strong>1-SSIM</strong> / <strong>CR</strong>) are averaged over all viewing directions.</h2>
+          </div>
+        </div>
+
+        <div class="columns is-centered" style="margin-bottom: 2rem;">
+          <div class="column is-10">
+            <img src="../static/images/uv/final_compare_result_v3_four_lines.png" alt="Qualitative comparison with baselines" style="width:100%; border-radius:8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);"/>
+            <h2 class="subtitle has-text-centered" style="margin-top:0.75rem;">Qualitative comparison. Our method produces smoother shadow boundaries without blocky artifacts from downsampling, and avoids color bleeding artifacts from prior UV-based approaches.</h2>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  </main>
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered">
+          <p>&copy; 2026 MagicDawn. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </footer>
+
+</body>
+</html>

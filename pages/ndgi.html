@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Neural Dynamic GI: Random-Access Compression for Temporal Multiple Lightmaps – CVPR 2026">
+  <title>NDGI – MagicDawn Research</title>
+
+  <link rel="icon" type="image/x-icon" href="../dawn/png/MD标识_竖版_原色_黑字.png">
+  <link rel="stylesheet" href="../static/css/bulma.min.css">
+  <link rel="stylesheet" href="../static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="../static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="../static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="../static/css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="../static/js/fontawesome.all.min.js"></script>
+  <script defer src="../static/js/bulma-carousel.min.js"></script>
+  <script defer src="../static/js/bulma-slider.min.js"></script>
+  <script defer src="../static/js/index.js"></script>
+</head>
+<body>
+
+  <!-- Back to Top -->
+  <button class="btn-top" onclick="goTop()" title="Back to top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Top Bar -->
+  <nav class="navbar is-fixed-top topbar" id="site-topbar" role="navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item topbar-brand" href="../index.html">
+          <img src="../dawn/png/MD标识_横版_原色_白字.png" alt="MagicDawn" class="topbar-logo">
+        </a>
+      </div>
+      <div class="navbar-end">
+        <a class="navbar-item topbar-link" href="../index.html#about">About</a>
+        <a class="navbar-item topbar-link" href="../index.html#publications">Publications</a>
+      </div>
+    </div>
+  </nav>
+
+  <main style="padding-top: 3.25rem;">
+
+  <!-- Paper Header -->
+  <div class="paper-head">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h2 class="title is-2 pub-title">Neural Dynamic GI: Random-Access Compression for Temporal Multiple Lightmaps Using Compact Neural Representations</h2>
+          <div class="is-size-5 pub-authors">
+            <span class="author-block">Jianhui Wu,</span>
+            <span class="author-block">Jian Zhou,</span>
+            <span class="author-block">Zhi Zhou,</span>
+            <span class="author-block">ZhangJin Huang,</span>
+            <span class="author-block">Chao Li</span>
+          </div>
+          <div class="is-size-5 pub-authors">
+            <span class="author-block">CVPR 2026</span>
+          </div>
+          <div class="column has-text-centered">
+            <div class="pub-links">
+              <span class="link-block">
+                <a class="external-link button is-normal is-rounded is-dark" disabled style="pointer-events:none;opacity:0.6;">
+                <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                <span>Paper (Coming Soon)</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a class="external-link button is-normal is-rounded is-dark" disabled style="pointer-events:none;opacity:0.6;">
+                <span class="icon"><i class="fab fa-github"></i></span>
+                <span>Code (Coming Soon)</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a class="external-link button is-normal is-rounded is-dark" disabled style="pointer-events:none;opacity:0.6;">
+                <span class="icon"><i class="fas fa-database"></i></span>
+                <span>Dataset (Coming Soon)</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Teaser Video -->
+  <div class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <video poster="../static/images/ndgi/head.jpg" autoplay controls muted loop playsinline style="width:100%; border-radius:8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); background:#fff;">
+          <source src="../static/videos/ndgi/NDGI.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <!-- Abstract -->
+  <div class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
+          <h3 class="title is-3">Abstract</h3>
+          <div class="content has-text-justified">
+            <p>
+              High-quality global illumination (GI) in real-time rendering is commonly achieved using precomputed lighting techniques, with lightmap as the standard choice. To support GI for static objects in dynamic lighting environments, multiple lightmaps at different lighting conditions need to be precomputed, which incurs substantial storage and memory overhead.
+            </p>
+            <p>
+              To overcome this limitation, we propose Neural Dynamic GI (NDGI), a novel compression technique specifically designed for temporal lightmap sets. Our method utilizes multi-dimensional feature maps and lightweight neural networks to integrate the temporal information instead of storing multiple sets explicitly, which significantly reduces the storage size of lightmaps. Additionally, we introduce a block compression (BC) simulation strategy during the training process, which enables BC compression on the final generated feature maps and further improves the compression ratio. To enable efficient real-time decompression, we also integrate a virtual texturing (VT) system with our neural representation.
+            </p>
+            <p>
+              Compared with prior methods, our approach achieves high-quality dynamic GI while maintaining remarkably low storage and memory requirements, with only modest real-time decompression overhead. To facilitate further research in this direction, we will release our temporal lightmap dataset precomputed in multiple scenes featuring diverse temporal variations.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Results -->
+  <div class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h3 class="title is-3 has-text-centered">Results</h3>
+
+        <!-- Method Overview -->
+        <div class="columns is-centered" style="margin-bottom: 2rem;">
+          <div class="column is-10">
+            <img src="../static/images/ndgi/method.jpg" alt="NDGI pipeline overview" style="width:100%; border-radius:8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);"/>
+            <h2 class="subtitle has-text-centered" style="margin-top:0.75rem;">Method overview: Offline compression encodes temporal lightmap sets into hybrid feature maps and a compact neural network. Runtime decompression reconstructs lightmaps on demand via virtual texturing.</h2>
+          </div>
+        </div>
+
+        <!-- Gallery -->
+        <div id="ndgi-gallery" class="carousel slide-gallery" style="margin-bottom: 2rem;">
+          <div class="item">
+            <img src="../static/images/ndgi/10.0RoomLit.jpg" alt="Room scene rendering"/>
+            <h2 class="subtitle has-text-centered">Room</h2>
+          </div>
+          <div class="item">
+            <img src="../static/images/ndgi/CA.jpg" alt="FarmLand scene rendering"/>
+            <h2 class="subtitle has-text-centered">FarmLand</h2>
+          </div>
+          <div class="item">
+            <img src="../static/images/ndgi/YardLit.jpg" alt="Yard scene rendering"/>
+            <h2 class="subtitle has-text-centered">Yard</h2>
+          </div>
+        </div>
+
+        <!-- Comparison Sliders -->
+        <div id="ndgi-carousel" class="carousel slide-gallery">
+
+          <!-- Room -->
+          <div class="item">
+            <div class="method-switch">
+              <button class="method-btn is-active" data-method="ndgi">NDGI (Ours)</button>
+              <button class="method-btn" data-method="ntc">NTC</button>
+            </div>
+            <div class="cmp-box">
+              <img src="../static/images/ndgi/RoomRef.jpg" alt="Room Reference" class="cmp-under"/>
+              <div class="cmp-over">
+                <img src="../static/images/ndgi/RoomNDGI.jpg" alt="Room NDGI" data-method="ndgi"/>
+                <img src="../static/images/ndgi/RoomNTC.jpg" alt="Room NTC" data-method="ntc" style="display:none;"/>
+              </div>
+              <div class="cmp-handle"></div>
+              <span class="cmp-tag cmp-tag-left">NDGI (Ours)</span>
+              <span class="cmp-tag cmp-tag-right">Reference</span>
+            </div>
+            <h2 class="subtitle has-text-centered">Room scene: Switch method above, drag slider to compare.</h2>
+          </div>
+
+          <!-- FarmLand -->
+          <div class="item">
+            <div class="method-switch">
+              <button class="method-btn is-active" data-method="ndgi">NDGI (Ours)</button>
+              <button class="method-btn" data-method="ntc">NTC</button>
+            </div>
+            <div class="cmp-box">
+              <img src="../static/images/ndgi/ref.jpg" alt="FarmLand Reference" class="cmp-under"/>
+              <div class="cmp-over">
+                <img src="../static/images/ndgi/ndgi.jpg" alt="FarmLand NDGI" data-method="ndgi"/>
+                <img src="../static/images/ndgi/ntc.jpg" alt="FarmLand NTC" data-method="ntc" style="display:none;"/>
+              </div>
+              <div class="cmp-handle"></div>
+              <span class="cmp-tag cmp-tag-left">NDGI (Ours)</span>
+              <span class="cmp-tag cmp-tag-right">Reference</span>
+            </div>
+            <h2 class="subtitle has-text-centered">FarmLand scene: Switch method above, drag slider to compare.</h2>
+          </div>
+
+          <!-- Yard -->
+          <div class="item">
+            <div class="method-switch">
+              <button class="method-btn is-active" data-method="ndgi">NDGI (Ours)</button>
+              <button class="method-btn" data-method="ntc">NTC</button>
+            </div>
+            <div class="cmp-box">
+              <img src="../static/images/ndgi/refy.jpg" alt="Yard Reference" class="cmp-under"/>
+              <div class="cmp-over">
+                <img src="../static/images/ndgi/ndgiy.jpg" alt="Yard NDGI" data-method="ndgi"/>
+                <img src="../static/images/ndgi/ntcy.jpg" alt="Yard NTC" data-method="ntc" style="display:none;"/>
+              </div>
+              <div class="cmp-handle"></div>
+              <span class="cmp-tag cmp-tag-left">NDGI (Ours)</span>
+              <span class="cmp-tag cmp-tag-right">Reference</span>
+            </div>
+            <h2 class="subtitle has-text-centered">Yard scene: Switch method above, drag slider to compare.</h2>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </main>
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered">
+          <p>&copy; 2026 MagicDawn. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </footer>
+
+</body>
+</html>
